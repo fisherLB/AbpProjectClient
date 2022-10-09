@@ -1,0 +1,108 @@
+{
+  "modules": {
+    "app": {
+      "rootPath": "app",
+      "remoteServiceName": "Default",
+      "controllers": {
+        "AbpProject.PersonService": {
+          "controllerName": "Person",
+          "controllerGroupName": "Person",
+          "isRemoteService": true,
+          "apiVersion": null,
+          "type": "AbpProject.PersonService",
+          "interfaces": [
+            {
+              "type": "Volo.Abp.Validation.IValidationEnabled"
+            },
+            {
+              "type": "Volo.Abp.Auditing.IAuditingEnabled"
+            },
+            {
+              "type": "Volo.Abp.GlobalFeatures.IGlobalFeatureCheckingEnabled"
+            },
+            {
+              "type": "AbpProject.IPersonService"
+            }
+          ],
+          "actions": {
+            "GetAsyncByName": {
+              "uniqueName": "GetAsyncByName",
+              "name": "GetAsync",
+              "httpMethod": "GET",
+              "url": "getName",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "name",
+                  "typeAsString": "System.String, System.Private.CoreLib",
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "name",
+                  "name": "name",
+                  "jsonName": null,
+                  "type": "System.String",
+                  "typeSimple": "string",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "ModelBinding",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "System.String",
+                "typeSimple": "string"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "AbpProject.IPersonService"
+            },
+            "PostAsyncByMode": {
+              "uniqueName": "PostAsyncByMode",
+              "name": "PostAsync",
+              "httpMethod": "POST",
+              "url": "post",
+              "supportedVersions": [],
+              "parametersOnMethod": [
+                {
+                  "name": "mode",
+                  "typeAsString": "AbpProject.DataModel, AbpProject.Application.Contracts",
+                  "type": "AbpProject.DataModel",
+                  "typeSimple": "AbpProject.DataModel",
+                  "isOptional": false,
+                  "defaultValue": null
+                }
+              ],
+              "parameters": [
+                {
+                  "nameOnMethod": "mode",
+                  "name": "mode",
+                  "jsonName": null,
+                  "type": "AbpProject.DataModel",
+                  "typeSimple": "AbpProject.DataModel",
+                  "isOptional": false,
+                  "defaultValue": null,
+                  "constraintTypes": null,
+                  "bindingSourceId": "Body",
+                  "descriptorName": ""
+                }
+              ],
+              "returnValue": {
+                "type": "AbpProject.DataModel",
+                "typeSimple": "AbpProject.DataModel"
+              },
+              "allowAnonymous": null,
+              "implementFrom": "AbpProject.IPersonService"
+            }
+          }
+        }
+      }
+    }
+  },
+  "types": {}
+}
